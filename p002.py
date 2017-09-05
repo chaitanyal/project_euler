@@ -33,10 +33,10 @@ def compute(num):
     ans = 0
 
     while ans <= num:
-        #every 3rd fibonacci term is even - 1 1 2 3 5 8 13 21 34
         n = fibonacci(i)
         #n = non_recursive_fibonacci(i)
         ans += n
+        #every 3rd fibonacci term is even - 1 1 2 3 5 8 13 21 34
         i = i + 3
 
     return ans
@@ -44,4 +44,4 @@ def compute(num):
 if __name__ == "__main__":
     NUM = 4 * 10**6 #4 million = 4 * 10^6
     print(compute(NUM))
-    print(fibonacci.cache_info()) #see # of cache hits/misses due to memoization
+    print(fibonacci.cache_info()) #see number of cache hits/misses due to memoization
